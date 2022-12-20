@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'SFProDisplay-Regular';
+  src: url('~@/assets/fonts/SFProDisplay-Regular.eot'),
+  url('~@/assets/fonts/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+  url('~@/assets/fonts/SFProDisplay-Regular.woff2') format('woff2'),
+  url('~@/assets/fonts/SFProDisplay-Regular.woff') format('woff'),
+  url('~@/assets/fonts/SFProDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Medium';
+  src: url('~@/assets/fonts/SFProDisplay-Medium.eot'),
+  url('~@/assets/fonts/SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+  url('~@/assets/fonts/SFProDisplay-Medium.woff2') format('woff2'),
+  url('~@/assets/fonts/SFProDisplay-Medium.woff') format('woff'),
+  url('~@/assets/fonts/SFProDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Bold';
+  src: url('~@/assets/fonts/SFProDisplay-Bold.eot'),
+  url('~@/assets/fonts/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+  url('~@/assets/fonts/SFProDisplay-Bold.woff2') format('woff2'),
+  url('~@/assets/fonts/SFProDisplay-Bold.woff') format('woff'),
+  url('~@/assets/fonts/SFProDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,48 @@
+@import "reset";
+@import "fonts";
+@import "colors";
+@import "vars";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body, h1 {
+  font-family: $ff-sf-regular;
+  background: $color-white;
+  color: $color-white;
+}
+
+html {
+  &.is-scroll-disable {
+    overflow-y: hidden;
+  }
+}
+
+.main-layout {
+  width: 100%;
+  min-height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+

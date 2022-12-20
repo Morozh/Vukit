@@ -1,0 +1,26 @@
+/* Layout */
+$mq-breakpoints: (
+  small: 320px,
+  mobile: 576px,
+  tablet: 768px,
+  desktop-xs: 1320px,
+  desktop: 1440px
+);
+
+/* Font size */
+$fz-base: 16px;
+$fz-medium: 14px;
+$fz-small: 12px;
+
+/* Font-family */
+$ff-fallback: sans-serif;
+$ff-sf-regular: 'SFProDisplay-Regular', $ff-fallback;
+$ff-sf-medium: 'SFProDisplay-Regular', $ff-fallback;
+$ff-sf-bold: 'SFProDisplay-Regular', $ff-fallback;
+
+/* Z-index */
+$z-layout: 100;
+$z-sticky: $z-layout + 10;
+$z-fixed: $z-layout + 20;
+$z-modal: $z-layout + 30;
+$z-tooltip: $z-layout + 40;
