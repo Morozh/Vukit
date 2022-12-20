@@ -1,0 +1,16 @@
+.header {
+  position: relative;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  z-index: $z-layout + 1;
+  padding: 1.25rem 2.125rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+  background-color: $color-white;
+}
+
+.header-logo {
+  color: $color-theme-accent-1;
+  font-family: $ff-sf-bold;
+  font-size: 1.25rem;
+}

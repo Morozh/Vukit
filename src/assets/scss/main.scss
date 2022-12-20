@@ -16,10 +16,10 @@ html, body {
   box-sizing: border-box;
 }
 
-body, h1 {
+body {
   font-family: $ff-sf-regular;
-  background: $color-white;
-  color: $color-white;
+  background: $color-gray;
+  color: $color-neutral-black;
 }
 
 html {
@@ -35,14 +35,22 @@ html {
   margin-left: auto;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr;
   position: relative;
 }
 
-.container {
+.content-layout {
+  margin-left: 14rem;
+  padding: 2rem;
+}
+
+%c-wrap {
   width: 100%;
-  max-width: 1360px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
 
+.container {
+ @extend %c-wrap;
+}
