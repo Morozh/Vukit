@@ -1,5 +1,12 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar" :class="{ 'is-open': isOpenMenu }">
+    <div
+      class="sidebar-toggle"
+      :class="{ 'is-open': isOpenMenu }"
+      @click="toggleMenu"
+    >
+      <span>&#5125;</span>
+    </div>
     <div class="sidebar-layout container">
       <ul class="sidebar-list">
         <li
@@ -7,7 +14,11 @@
           :key="link"
           class="sidebar-list__item"
         >
-          <router-link class="sidebar-list__item-link" :to="link.link">
+          <router-link
+            :to="link.link"
+            class="sidebar-list__item-link"
+            active-class="is-active"
+          >
             {{ link.title }}
           </router-link>
         </li>
@@ -29,12 +40,22 @@ export default defineComponent({
         link: '/typography',
       },
       {
-        title: 'Button',
-        link: '/button',
+        title: 'Buttons',
+        link: '/buttons',
+      },
+      {
+        title: 'Checkbox',
+        link: '/checkbox',
       },
     ]);
 
-    return { links };
+    const isOpenMenu = ref<boolean>(false);
+
+    const toggleMenu = () => {
+      isOpenMenu.value = !isOpenMenu.value;
+    };
+
+    return { links, isOpenMenu, toggleMenu };
   },
 });
 </script>

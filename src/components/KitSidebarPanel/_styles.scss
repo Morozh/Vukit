@@ -1,15 +1,42 @@
 .sidebar {
   position: fixed;
+  z-index: $z-layout;
   left: 0;
   top: 3.75rem;
   height: 100%;
   padding: 1.25rem 0;
-  z-index: $z-layout;
   width: 14rem;
-  transition: .2s ease-in-out;
-  transform: translateX(0);
+  transition: transform .3s ease-in-out;
+  transform: translateX(-13rem);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
   background-color: $color-white;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 1rem;
+  height: 100%;
+  background-color: $color-theme-accent-1;
+  color: $color-white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .875rem;
+  
+  &.is-open span {
+    transform: rotate(180deg);
+  }
+
+  > span {
+    transition: transform .3s ease-in-out;
+  }
 }
 
 .sidebar-list {
@@ -18,14 +45,19 @@
       display: block;
       font-family: $ff-sf-medium;
       font-size: 1.125rem;
-      transition: .2s ease;
+      transition: .3s ease-in-out;
       margin-bottom: .75rem;
       color: $color-theme-accent-1;
-      border-radius: .25rem;
+      border-radius: 1rem;
       border: 1px solid transparent;
       padding: .5rem 1rem;
-  
+
       &:hover {
+        color: $color-theme-accent-1;
+        border-color: $color-theme-accent-1;
+      }
+
+      &.is-active {
         color: $color-theme-accent-1;
         border-color: $color-theme-accent-1;
       }

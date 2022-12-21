@@ -1,23 +1,38 @@
 <template>
-  <div class="main-layout">
-    <kit-header />
-    <kit-sidebar-panel />
-    <div class="content-layout">
-      <h1>Welcome to our UI Kit!</h1>
+  <div class="hero-block">
+    <h1 class="title-0">Welcome to my UI Kit!</h1>
+    <div class="hero-grid">
+      <img class="hero-grid__preview" :src="UiPreview" alt="UiPreview" />
     </div>
   </div>
+
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import KitHeader from '@/components/KitHeader/KitHeader.vue';
-import KitSidebarPanel from '@/components/KitSidebarPanel/KitSidebarPanel.vue';
+import UiPreview from '@/assets/img/ui-kit-preview-1.svg';
 
 export default defineComponent({
   name: 'Home',
-  components: {
-    KitHeader,
-    KitSidebarPanel,
+  setup() {
+    return { UiPreview };
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.hero-grid {
+  display: grid;
+  justify-content: center;
+
+  &__preview {
+    margin: 0 auto;
+  }
+}
+
+.title-0 {
+  text-align: center;
+  border: none;
+  margin-bottom: 3rem;
+}
+</style>

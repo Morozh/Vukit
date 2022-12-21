@@ -1,5 +1,8 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 import Home from '../views/Home.vue';
+import Typography from '../views/Typography.vue';
+import Buttons from '../views/Buttons.vue';
+import Checkbox from '../views/Checkbox.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -10,12 +13,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/typography',
     name: 'Typography',
-    component: () => import(/* webpackChunkName: "typography" */ '../views/Typography.vue'),
+    component: Typography,
   },
   {
-    path: '/button',
-    name: 'Button',
-    component: () => import(/* webpackChunkName: "button" */ '../views/Button.vue'),
+    path: '/buttons',
+    name: 'Buttons',
+    component: Buttons,
+  },
+  {
+    path: '/checkbox',
+    name: 'Checkbox',
+    component: Checkbox,
   },
 ];
 
