@@ -1,16 +1,55 @@
 .header {
   position: relative;
-  height: 3.75rem;
-  display: flex;
-  align-items: center;
   z-index: $z-layout + 1;
   padding: 1.25rem 2.125rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
   background-color: $color-white;
 }
 
+.header-layout {
+  display: flex;
+  align-items: center;
+}
+
 .header-logo {
-  color: $color-theme-accent-1;
-  font-family: $ff-sf-bold;
-  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+
+  &__img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: .25rem;
+    font-family: $ff-sf-bold;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: $color-theme-accent-1;
+  }
+
+  &__description {
+    display: flex;
+    align-items: center;
+    font-family: $ff-sf-medium;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: $color-neutral-black;
+    gap: 0 .75rem;
+  }
+}
+
+.project-version {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.125rem;
+  height: 1.875rem;
+  border-radius: .75rem;
+  background-color: $color-theme-accent-1;
+  font-size: .75rem;
+  line-height: 1.4;
+  color: $color-white;
 }

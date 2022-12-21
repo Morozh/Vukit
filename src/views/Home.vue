@@ -1,6 +1,6 @@
 <template>
   <div class="hero-block">
-    <h1 class="title-0">Welcome to my UI Kit!</h1>
+    <h1 class="title-0">Vukit.</h1>
     <div class="hero-grid">
       <img class="hero-grid__preview" :src="UiPreview" alt="UiPreview" />
     </div>

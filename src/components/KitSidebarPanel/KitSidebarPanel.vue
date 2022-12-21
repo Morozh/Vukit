@@ -33,7 +33,8 @@ import Link from '@/types/Link';
 
 export default defineComponent({
   name: 'KitSidebar',
-  setup() {
+  emits: ['toggleMenu'],
+  setup(props, { emit }) {
     const links = ref<Link[]>([
       {
         title: 'Typography',
@@ -49,13 +50,18 @@ export default defineComponent({
       },
     ]);
 
-    const isOpenMenu = ref<boolean>(false);
+    const isOpenMenu = ref<boolean>(true);
 
     const toggleMenu = () => {
       isOpenMenu.value = !isOpenMenu.value;
+      emit('toggleMenu', isOpenMenu.value);
     };
 
-    return { links, isOpenMenu, toggleMenu };
+    return {
+      links,
+      isOpenMenu,
+      toggleMenu,
+    };
   },
 });
 </script>
