@@ -1,4 +1,5 @@
-# vue3-ui-kit
+# Vukit
+UI kit based on Vue 3 Composition API + TypeScript
 
 ## Project setup
 ```
