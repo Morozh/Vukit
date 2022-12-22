@@ -1,0 +1,71 @@
+.kit-button {
+  font-family: $ff-sf-medium;
+  padding: 0 1.25rem;
+  margin-right: .625rem;
+  height: 2.5rem;
+  transition: .3s ease;
+  color: $color-white;
+  cursor: pointer;
+  border: none;
+  border-radius: .375rem;
+
+  // Colors
+  &_accent {
+    border: 1px solid $color-theme-accent;
+    background-color: $color-theme-accent;
+
+    &:enabled:hover  {
+      background-color: $color-theme-accent-hover;
+    }
+  }
+
+  &_primary {
+    border: 1px solid $color-theme-primary;
+    background-color: $color-theme-primary;
+
+    &:enabled:hover  {
+      background-color: $color-theme-primary-hover;
+    }
+  }
+
+  &_success {
+    border: 1px solid $color-theme-success;
+    background-color: $color-theme-success;
+
+    &:enabled:hover  {
+      background-color: $color-theme-success-hover;
+    }
+  }
+
+  &_info {
+    border: 1px solid $color-theme-info;
+    background-color: $color-theme-info;
+
+    &:enabled:hover  {
+      background-color: $color-theme-info-hover;
+    }
+  }
+
+  &_warning {
+    border: 1px solid $color-theme-warning;
+    background-color: $color-theme-warning;
+
+    &:enabled:hover  {
+      background-color: $color-theme-warning-hover;
+    }
+  }
+
+  &_danger {
+    border: 1px solid $color-theme-danger;
+    background-color: $color-theme-danger;
+
+    &:enabled:hover {
+      background-color: $color-theme-danger-hover;
+    }
+  }
+
+  // Border-radius
+  &_rounded {
+    border-radius: 1rem;
+  }
+}

@@ -9,7 +9,7 @@
   transition: transform .3s ease-in-out;
   transform: translateX(-13rem);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
-  background-color: $color-white;
+  background-color: $color-theme-accent;
 
   &.is-open {
     transform: translateX(0);
@@ -17,12 +17,12 @@
 }
 
 .sidebar-toggle {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   width: 1rem;
   height: 100%;
-  background-color: $color-theme-accent-1;
+  background-color: $color-theme-accent;
   color: $color-white;
   cursor: pointer;
   display: flex;
@@ -47,19 +47,21 @@
       font-size: 1.125rem;
       transition: .3s ease-in-out;
       margin-bottom: .75rem;
-      color: $color-theme-accent-1;
+      color: $color-white;
       border-radius: 1rem;
       border: 1px solid transparent;
       padding: .5rem 1rem;
 
       &:hover {
-        color: $color-theme-accent-1;
-        border-color: $color-theme-accent-1;
+        color: $color-theme-accent;
+        border-color: $color-white;
+        background-color: $color-white;
       }
 
       &.is-active {
-        color: $color-theme-accent-1;
-        border-color: $color-theme-accent-1;
+        color: $color-theme-accent;
+        border-color: $color-white;
+        background-color: $color-white;
       }
     }
   }

@@ -50,6 +50,25 @@ html {
   }
 }
 
+.content-block {
+  &:not(:last-of-type) {
+    padding-bottom: 3rem;
+  }
+}
+
+.grid-list {
+  display: grid;
+  gap: 1.5rem 0;
+
+  &__item {
+    &-name {
+      font-size: 1.25rem;
+      margin-bottom: .75rem;
+      color: $color-neutral-gray;
+    }
+  }
+}
+
 %c-wrap {
   width: 100%;
   max-width: 1440px;

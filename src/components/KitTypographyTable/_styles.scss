@@ -1,0 +1,43 @@
+.kit-typo-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem 0;
+
+  &__font {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem 0;
+
+    &-title {
+      font-size: 6.25rem; //100px
+    }
+
+    &-subtitle {
+      font-family: $ff-sf-medium;
+      font-size: 3rem; //100px
+    }
+  }
+}
+
+.kit-typo-table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid $color-darken-gray;
+  border-left: 1px solid $color-darken-gray;
+}
+
+.kit-typo-table-cell {
+  padding: 3rem;
+  border-right: 1px solid $color-darken-gray;
+  border-bottom: 1px solid $color-darken-gray;
+
+  &__title {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    opacity: .7;
+  }
+}

@@ -1,16 +1,26 @@
+// Base colors
 $color-white: #ffffff;
 $color-black: #000000;
 $color-gray: #FAFAFA;
+$color-darken-gray: #ECE9F1;
 
+// Neutral colors
 $color-neutral-black: #1A051D;
+$color-neutral-gray: #3F3356;
 
-$color-theme-accent-1: #6979F8;
-$color-theme-accent-2: #A5AFFB;
-$color-theme-accent-3: #E5E7FA;
-
-$color-theme-primary-1: #BE52F2;
-$color-theme-primary-2: #DBA5F5;
-$color-theme-primary-3: #EEDFF2;
+// Theme colors
+$color-theme-accent: #6979F8;
+$color-theme-accent-hover: #A5AFFB;
+$color-theme-primary: #BE52F2;
+$color-theme-primary-hover: #DBA5F5;
+$color-theme-success: #00C48C;
+$color-theme-success-hover: #7DDFC3;
+$color-theme-info: #0084F4;
+$color-theme-info-hover: #66B5F8;
+$color-theme-warning: #FFA26B;
+$color-theme-warning-hover: #FFC7A6;
+$color-theme-danger: #FF647C;
+$color-theme-danger-hover: #FDAFBB;
 
 $color-gradient-purple: linear-gradient(225deg, #BD7AE3 0%, #8461C9 100%);
 $color-gradient-lighten-purple: linear-gradient(225deg, #CDDDF4 3.26%, #CDBAFA 100%);
