@@ -4,11 +4,17 @@
   padding: 1.25rem 2.125rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
   background-color: $color-white;
+
+  &.is-sticky {
+    position: sticky;
+    top: 0;
+  }
 }
 
 .header-layout {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .header-logo {
@@ -39,6 +45,11 @@
     color: $color-neutral-black;
     gap: 0 .75rem;
   }
+}
+
+.header-copy {
+  font-size: $fz-small;
+  color: $color-neutral-black;
 }
 
 .project-version {

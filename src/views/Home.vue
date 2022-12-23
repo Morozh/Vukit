@@ -21,6 +21,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.hero-block {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
 .hero-grid {
   display: grid;
   justify-content: center;

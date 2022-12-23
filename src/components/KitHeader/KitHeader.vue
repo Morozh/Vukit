@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header is-sticky">
     <div class="header-layout">
       <router-link class="header-logo" to="/">
         <img class="hero-logo__img" :src="Logo" alt="UI Style Guide EGGPLORE" />
@@ -11,6 +11,11 @@
           </span>
         </div>
       </router-link>
+      <a
+        href="https://morozh.github.io/"
+        target="_blank"
+        class="header-copy"
+      >Created by Morozh.</a>
     </div>
   </header>
 </template>

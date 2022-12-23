@@ -4,9 +4,17 @@
       'kit-button',
       `kit-button_${color}`,
       { 'kit-button_rounded': rounded },
+      { 'kit-button_outlined': outlined },
+      { 'kit-button_icon': icon },
+      { 'kit-button_large': size === 'large' }
     ]"
+    :disabled="disabled"
+    @click="clickOnButton"
   >
-    {{ label }}
+    <span v-if="icon">
+      <font-awesome-icon :icon="`fa-regular fa-${icon}`" />
+    </span>
+    <span v-else>{{ label }}</span>
   </button>
 </template>
 
@@ -30,6 +38,31 @@ export default defineComponent({
       required: false,
       type: Boolean,
     },
+    disabled: {
+      required: false,
+      type: Boolean,
+    },
+    outlined: {
+      required: false,
+      type: Boolean,
+    },
+    icon: {
+      required: false,
+      type: String,
+    },
+    size: {
+      required: false,
+      type: String,
+      default: 'normal',
+    },
+  },
+  emits: ['cb'],
+  setup(props, { emit }) {
+    const clickOnButton = () => {
+      emit('cb');
+    };
+
+    return { clickOnButton };
   },
 });
 </script>

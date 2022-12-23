@@ -9,6 +9,12 @@
   border: none;
   border-radius: .375rem;
 
+  // Disabled state
+  &:disabled {
+    opacity: .6;
+    cursor: default;
+  }
+
   // Colors
   &_accent {
     border: 1px solid $color-theme-accent;
@@ -67,5 +73,29 @@
   // Border-radius
   &_rounded {
     border-radius: 1rem;
+  }
+
+  // Outlined
+  &_outlined {
+    color: $color-neutral-black;
+    background-color: transparent;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  // Iconic
+  &_icon {
+    padding: 0;
+    width: 2.5rem; //40px
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+
+  // Size
+  &_large {
+    padding: 0 1.875rem; //30px
+    height: 3rem; //48px
   }
 }

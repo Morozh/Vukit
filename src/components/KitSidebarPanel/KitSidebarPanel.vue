@@ -2,10 +2,9 @@
   <div class="sidebar" :class="{ 'is-open': isOpenMenu }">
     <div
       class="sidebar-toggle"
-      :class="{ 'is-open': isOpenMenu }"
       @click="toggleMenu"
     >
-      <span>&#5125;</span>
+      <span>&#9658;</span>
     </div>
     <div class="sidebar-layout container">
       <ul class="sidebar-list">

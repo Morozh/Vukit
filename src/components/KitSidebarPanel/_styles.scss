@@ -25,17 +25,12 @@
   background-color: $color-theme-accent;
   color: $color-white;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: .875rem;
-  
-  &.is-open span {
-    transform: rotate(180deg);
-  }
 
   > span {
-    transition: transform .3s ease-in-out;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-45%);
   }
 }
 
