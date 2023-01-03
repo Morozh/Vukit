@@ -15,7 +15,7 @@
         href="https://morozh.github.io/"
         target="_blank"
         class="header-copy"
-      >Created by Morozh.</a>
+      >© Created by Morozh. 2022</a>
     </div>
   </header>
 </template>

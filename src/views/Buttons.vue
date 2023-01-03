@@ -10,8 +10,8 @@
       </div>
       <div class="grid-list__item">
         <p class="grid-list__item-name">Disabled</p>
-        <kit-button label="Accent" color="accent" :disabled="true" />
-        <kit-button label="Primary" color="primary"  :disabled="true" />
+        <kit-button label="Accent" color="accent" disabled />
+        <kit-button label="Primary" color="primary" disabled />
       </div>
       <div class="grid-list__item">
         <p class="grid-list__item-name">Colors</p>
@@ -24,21 +24,21 @@
       </div>
       <div class="grid-list__item">
         <p class="grid-list__item-name">Rounded</p>
-        <kit-button label="Accent" color="accent" :rounded="true" />
-        <kit-button label="Primary" color="primary" :rounded="true" />
-        <kit-button label="Success" color="success" :rounded="true" />
-        <kit-button label="Info" color="info" :rounded="true" />
-        <kit-button label="Warning" color="warning" :rounded="true" />
-        <kit-button label="Danger" color="danger" :rounded="true" />
+        <kit-button label="Accent" color="accent" rounded />
+        <kit-button label="Primary" color="primary" rounded />
+        <kit-button label="Success" color="success" rounded />
+        <kit-button label="Info" color="info" rounded />
+        <kit-button label="Warning" color="warning" rounded />
+        <kit-button label="Danger" color="danger" rounded />
       </div>
       <div class="grid-list__item">
         <p class="grid-list__item-name">Outlined</p>
-        <kit-button label="Accent" color="accent" :outlined="true" />
-        <kit-button label="Primary" color="primary" :outlined="true" />
-        <kit-button label="Success" color="success" :outlined="true" />
-        <kit-button label="Info" color="info" :outlined="true" />
-        <kit-button label="Warning" color="warning" :outlined="true" />
-        <kit-button label="Danger" color="danger" :outlined="true" />
+        <kit-button label="Accent" color="accent" outlined />
+        <kit-button label="Primary" color="primary" outlined />
+        <kit-button label="Success" color="success" outlined />
+        <kit-button label="Info" color="info" outlined />
+        <kit-button label="Warning" color="warning" outlined />
+        <kit-button label="Danger" color="danger" outlined />
       </div>
       <div class="grid-list__item">
         <p class="grid-list__item-name">Iconic</p>
@@ -51,12 +51,12 @@
       </div>
       <div class="grid-list__item">
         <p class="grid-list__item-name">Iconic outlined</p>
-        <kit-button label="Accent" color="accent" icon="heart" :outlined="true" />
-        <kit-button label="Primary" color="primary" icon="hand" :outlined="true" />
-        <kit-button label="Success" color="success" icon="address-book" :outlined="true" />
-        <kit-button label="Info" color="info" icon="credit-card" :outlined="true" />
-        <kit-button label="Warning" color="warning" icon="lemon" :outlined="true" />
-        <kit-button label="Danger" color="danger" icon="hourglass" :outlined="true" />
+        <kit-button label="Accent" color="accent" icon="heart" outlined />
+        <kit-button label="Primary" color="primary" icon="hand" outlined />
+        <kit-button label="Success" color="success" icon="address-book" outlined />
+        <kit-button label="Info" color="info" icon="credit-card" outlined />
+        <kit-button label="Warning" color="warning" icon="lemon" outlined />
+        <kit-button label="Danger" color="danger" icon="hourglass" outlined />
       </div>
       <div class="grid-list__item">
         <p class="grid-list__item-name">Size</p>
@@ -65,7 +65,7 @@
       </div>
       <div class="grid-list__item">
         <p class="grid-list__item-name">Event</p>
-        <kit-button label="@Click" color="accent" @cb="eventForButton" />
+        <kit-button label="@Click" color="primary" @cb="eventForButton" />
       </div>
     </div>
   </div>
