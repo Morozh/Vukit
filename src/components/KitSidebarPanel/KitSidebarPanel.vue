@@ -51,7 +51,7 @@ export default defineComponent({
 
     const isOpenMenu = ref<boolean>(true);
 
-    const toggleMenu = () => {
+    const toggleMenu = (): void => {
       isOpenMenu.value = !isOpenMenu.value;
       emit('toggleMenu', isOpenMenu.value);
     };

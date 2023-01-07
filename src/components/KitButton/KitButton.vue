@@ -58,7 +58,7 @@ export default defineComponent({
   },
   emits: ['cb'],
   setup(props, { emit }) {
-    const clickOnButton = () => {
+    const clickOnButton = (): void => {
       emit('cb');
     };
 

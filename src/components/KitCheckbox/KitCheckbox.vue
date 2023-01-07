@@ -59,7 +59,7 @@ export default defineComponent({
   },
   emits: ['update:checked', 'updateCheckboxGroup'],
   setup(props, { emit }) {
-    const handleCheckbox = (e: Record<string, any>) => {
+    const handleCheckbox = (e: Record<string, { checked: boolean }>): void => {
       if (props.group) {
         emit('updateCheckboxGroup', { optionId: props.id, checked: e.target.checked });
       } else {

@@ -50,7 +50,9 @@ export default defineComponent({
   },
   emits: ['update:value'],
   setup(props, { emit }) {
-    const checkGroup = (params: Record<string, boolean>) => {
+    const checkGroup = (params: Record<string | number,
+     { optionId: string; checked: boolean }
+    >): void => {
       const updateValue = [...props.value];
 
       if (params.checked) {
