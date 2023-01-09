@@ -1,21 +1,36 @@
 <template>
-  <input
-    type="checkbox"
-    class="kit-checkbox"
-    :name="name"
-    :id="id"
-    :value="value"
-    :checked="checked"
-    :disabled="disabled"
-    @input="handleCheckbox($event)"
-  >
-  <label
-    :class="[
-      'kit-checkbox-label',
-      { 'is-disabled': disabled }
-    ]"
-    :for="id"
-  >{{ label }}</label>
+  <div :class="[
+    { 'kit-switch-container': type === 'switch' }
+  ]">
+    <input
+      type="checkbox"
+      :class="[
+        { 'kit-checkbox': type === 'checkbox' },
+        { 'kit-switch': type === 'switch' },
+      ]"
+      :name="name"
+      :id="id"
+      :value="value"
+      :checked="checked"
+      :disabled="disabled"
+      @input="handleCheckbox($event)"
+    >
+    <label
+      :class="[
+        'kit-label',
+        { 'is-disabled': disabled }
+      ]"
+      :for="id"
+    >{{ label }}</label>
+    <label
+      v-if="type === 'switch'"
+      :class="[
+        'kit-switch-label',
+        { 'is-disabled': disabled }
+      ]"
+      :for="id"
+    >{{ label }}</label>
+  </div>
 </template>
 
 <script lang="ts">
@@ -55,6 +70,11 @@ export default defineComponent({
       required: false,
       type: Boolean,
       default: false,
+    },
+    type: {
+      required: false,
+      type: String,
+      default: 'checkbox',
     },
   },
   emits: ['update:checked', 'updateCheckboxGroup'],

@@ -1,32 +1,13 @@
+// Checkbox default
 .kit-checkbox {
   $root: &;
   position: absolute;
   z-index: -1;
   opacity: 0;
+  height: 0;
+  width: 0;
 
-  &:checked + #{$root}-label:before {
-    border-color: $color-white;
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.4937 4.75844C11.8383 4.41385 12.397 4.41385 12.7416 4.75844C13.0861 5.10302 13.0861 5.66169 12.7416 6.00627L7.44745 11.3004C7.10287 11.645 6.54419 11.645 6.19961 11.3004L3.25844 8.35921C2.91385 8.01463 2.91385 7.45596 3.25844 7.11138C3.60302 6.7668 4.16169 6.7668 4.50627 7.11138L6.82353 9.42863L11.4937 4.75844Z' fill='%236979F8'/%3E%3C/svg%3E%0A");
-    box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
-    background-color: $color-white;
-  }
-
-  &:disabled + #{$root}-label:before {
-    background-image: unset;
-    box-shadow: unset;
-    border-color: $color-disabled-gray;
-    background-color: $color-disabled-gray;
-  }
-}
-
-.kit-checkbox-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0 .5rem;
-  user-select: none;
-  cursor: pointer;
-
-  &:before {
+  & + .kit-label:before {
     content: '';
     display: inline-block;
     width: 1.5rem;
@@ -40,6 +21,28 @@
     transition: .3s ease;
   }
 
+  &:checked + .kit-label:before {
+    border-color: $color-white;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.4937 4.75844C11.8383 4.41385 12.397 4.41385 12.7416 4.75844C13.0861 5.10302 13.0861 5.66169 12.7416 6.00627L7.44745 11.3004C7.10287 11.645 6.54419 11.645 6.19961 11.3004L3.25844 8.35921C2.91385 8.01463 2.91385 7.45596 3.25844 7.11138C3.60302 6.7668 4.16169 6.7668 4.50627 7.11138L6.82353 9.42863L11.4937 4.75844Z' fill='%236979F8'/%3E%3C/svg%3E%0A");
+    box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+    background-color: $color-white;
+  }
+
+  &:disabled + .kit-label:before {
+    background-image: unset;
+    box-shadow: unset;
+    border-color: $color-disabled-gray;
+    background-color: $color-disabled-gray;
+  }
+}
+
+.kit-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 .5rem;
+  user-select: none;
+  cursor: pointer;
+
   &.is-disabled {
     cursor: default;
 
@@ -51,4 +54,54 @@
       background-color: $color-disabled-gray;
     }
   }
+}
+
+// Checkbox switch
+.kit-switch-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.kit-switch {
+  $root: &;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  height: 0;
+  width: 0;
+
+  & + .kit-label {
+    position: relative;
+    display: block;
+    text-indent: -9999px;
+    width: 3rem;
+    height: 1.75rem;
+    border-radius: 1rem;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.07);
+    background-color: $color-white;
+    cursor: pointer;
+    user-select: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateX(0%) translateY(-50%);
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: $color-darken-gray-alternative;
+      transition: .3s ease;
+      left: .125rem;
+    }
+  }
+
+  &:checked + .kit-label:after {
+    left: calc(100% - 1.75rem);
+    background: $color-gradient-purple;
+  }
+}
+
+.kit-switch-label {
+  margin-left: .625rem;
 }

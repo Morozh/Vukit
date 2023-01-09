@@ -35,6 +35,14 @@
       </div>
       <div class="grid-list__item">
         <p class="grid-list__item-name">Switch: </p>
+        <kit-checkbox
+          type="switch"
+          label="Switch checkbox"
+          name="switch"
+          id="switch"
+          value="Switch checkbox"
+          v-model:checked="checkboxSwitch"
+        />
       </div>
     </div>
   </div>
@@ -77,12 +85,15 @@ export default defineComponent({
 
     const selectedHeroes = ref<string[]>(['1']);
 
+    const checkboxSwitch = ref<boolean>(false);
+
     return {
       checkboxActive,
       checkboxDisabled,
       checkboxDisabledChecked,
       listOfHeroes,
       selectedHeroes,
+      checkboxSwitch,
     };
   },
 });
